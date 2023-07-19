@@ -10,9 +10,20 @@ environment {
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean deploy'
+                echo "-----------build started-----------"
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                echo "-----------build complted----------"
             }
         }
+        stage("test"){
+            steps{
+                echo "-----------unit test started---------"
+                sh 'mvn surefire-report:report'
+                 echo "----------unit test complted--------"
+            }
+        }
+
+
     stage('SonarQube analysis') {
     environment {
      scannerHome = tool 'sonar-scanner'
