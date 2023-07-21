@@ -101,10 +101,12 @@ environment {
      }
     }
 
-     stage ("Deploy") {
+     stage (" Deploy ") {
         steps {
           script {
+             echo'<--------------------Deploy------------->'
              sh './deploy.sh'
           }
+          '<---------------Complete---------->'
         }
-     }
+    } 
