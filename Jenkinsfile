@@ -102,7 +102,7 @@ environment {
         steps {
           script {
              echo'<--------------------Deploy------------->'
-             sh '.. /deploy.sh'
+             sh 'deploy.sh'
           '<---------------Complete---------->'
         }
      } 
