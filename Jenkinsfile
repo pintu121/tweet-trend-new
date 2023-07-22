@@ -101,7 +101,7 @@ environment {
      }
     }
 
-     stage (" Deploy ") {
+             stage (" Deploy ") {
         steps {
           script {
              echo'<--------------------Deploy------------->'
