@@ -17,7 +17,7 @@ spec:
       - name: docker-cred
       containers:
       - name:  pintu-rtp
-        image: pintu121.jfrog.io/pintu-docker/ttrend:2.1.2
+        image: pintu121.jfrog.io/pintu-docker/ttrend:2.1.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
